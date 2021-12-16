@@ -32,10 +32,11 @@ function clearFields(){
     age.value = ''
     year.value = ''
     age.focus()
-    resultTxt.innerHTML = ''
-    yearBornTxt.innerHTML = ''
-    year100Txt.innerHTML = ''
-    retirementTxt.innerHTML= ''
+    resultTxt.textContent = ''
+    yearBornTxt.textContent = ''
+    year100Txt.textContent = ''
+    retirementTxt.textContent= ''
+    daysPassedTxt.textContent =''
 }
 
 // Function which makes all the calculations
@@ -43,7 +44,7 @@ function calculateYear(){
     currentAge = parseInt(age.value)
     futureYear = parseInt(year.value)
     if (isNaN(currentAge) || isNaN(futureYear)){
-        resultTxt.innerHTML = 'Please enter numbers.'
+        resultTxt.textContent = 'Please enter numbers.'
     }
     else {
         // Calculations
@@ -57,11 +58,11 @@ function calculateYear(){
         retirementDays = parseInt(65 - currentAge) * 365
         
         // Printing calculations
-        resultTxt.innerHTML = `You will be ${result} years old in ${futureYear}. That's in ~ ${resultDays} days.`
-        yearBornTxt.innerHTML = `You were born in ${birthDate}.`
-        year100Txt.innerHTML = `You will be 100 years old in ${yearOneHundred}. That's in ~ ${yearOneHundredDays} days.`
-        retirementTxt.innerHTML = `You will retire in ${retirementAge}. That's in ~ ${retirementDays} days.`
-        daysPassedTxt.innerHTML = `Approximately ${daysGone} days have passed since you were born.`
+        resultTxt.textContent = `You will be ${result} years old in ${futureYear}. That's in ~ ${resultDays} days.`
+        yearBornTxt.textContent = `You were born in ${birthDate}.`
+        year100Txt.textContent = `You will be 100 years old in ${yearOneHundred}. That's in ~ ${yearOneHundredDays} days.`
+        retirementTxt.textContent = `You will retire in ${retirementAge}. That's in ~ ${retirementDays} days.`
+        daysPassedTxt.textContent = `Approximately ${daysGone} days have passed since you were born.`
     }
 }      
 
